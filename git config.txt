@@ -1,0 +1,42 @@
+git config --global user.name "nikki"
+git config --global user.email "deepunikhil@gmail.com"
+git config --list
+pwd
+mkdir git_demo
+cd git_demo
+mkdir firstrepo
+cd firstrepo
+pwd
+git init 
+touch alpha.txt
+notepad alpha.txt
+git status
+git add alpha.txt   or git add .
+git status
+git commit -m "hello alpha"
+git log
+touch beta.txt
+notepad beta.txt
+notepad alpha.txt
+git status 
+git add .
+git commit -m "h alpha n beta"
+**********create new repo on the github then 
+git remote add origin git@github.com:goppisetty-nikhil/firstrepo.git
+git remote -v
+git branch -M main
+git push -u origin main
+***********push folder from local to git move to adddress
+git add .
+git commit -m "add folder"
+git push -u origin main
+
+
+
+
+***********for removing
+git config --global --remove-section user
+************for list
+git config --list
+*****************connect git bash to git hub with ssh
+$  ssh-keygen -t rsa -b 4096 -C "deepunikhil@gmail.com"

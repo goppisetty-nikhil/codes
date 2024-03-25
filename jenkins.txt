@@ -1,0 +1,39 @@
+***********************jenkins
+
+sudo su-
+cd /opt
+ 
+********java rpm
+
+yum install fontconfig java-17-openjdk
+
+***********wget permissions
+
+sudo dnf search wget
+
+sudo dnf install wget
+
+wget https://www.cyberciti.biz/files/hello-linux-module.zip
+
+wget --version
+
+*******************jenkins
+
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+
+yum install jenkins
+
+***********start jenkins
+
+systemctl start jenkins.service
+http:localhost:8080
+createpassword: cat /var/lib/jenkins/secrets/initialAdminPassword
+password:  de3407a0460d46c39b85176d9fa45877
+
+
+systemctl status jenkins.service
+  (sevice jenkins status)
+
+

@@ -1,0 +1,21 @@
+yum instal java
+cd maven opt
+/root/maven
+cd bin 
+/root/maven/bin
+command for java path
+ alternatives --config java
+ /usr/lib/jvm/java-21-amazon-corretto.x86_64/bin/java 
+command for brsc
+ll -a
+vi .bash_profile
+
+
+JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto.x86_64/bin/java
+M2_HOME=/root/maven
+M2=/root/maven/bin
+
+
+PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2
+
+export PATH

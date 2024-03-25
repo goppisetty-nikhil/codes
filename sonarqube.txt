@@ -1,0 +1,39 @@
+ssh -i "ne.pem" ec2-user@ec2-54-144-80-59.compute-1.amazonaws.com
+sonarqube 
+
+launch instance
+sudo su -
+yum install java
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.9.4.87374.zip?_gl=1*wr6kio*_gcl_au*MTcyMjA1MDY2NS4xNzA5NzEwNjk5*_ga*MTkzMDIxNDU3MC4xNzA5NzEwNzAw*_ga_9JZ0GZ5TC6*MTcwOTcxMDY5OS4xLjAuMTcwOTcxMDcwOS41MC4wLjA.
+unzip sonar.zip
+useradd sonar
+visudo {root ALL=(ALL) :ALL
+        sonar ALL=(ALL) NOPASSWORD:ALL}
+***********root access permission
+ chown -R sonar:sonar /opt/sonarqube-10.4.1.88267
+********file permissoin
+ chmod -R 775 sonar
+
+************switch user 
+su sonar -
+pwd
+ll
+cd sonarqube-10.4.1.88267
+ll
+cd bin
+ll
+ cd linux-x86-64
+ll
+*************to start sonar
+./sonar.sh start
+***************to status
+./sonar.sh status
+
+*************************change password*****
+https://localhost:9000
+ login
+
+ *************************checking error
+sudo vi/opt/sonarqube/confi/sonar.properties
+ 
+
